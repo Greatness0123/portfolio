@@ -52,7 +52,7 @@ export function Header() {
 
   const downloadCV = () => {
     const link = document.createElement("a")
-    link.href = "Greatness_Okorie_CV.pdf"
+    link.href = "/Greatness_Okorie_CV.pdf"
     link.download = "Greatness_Okorie_CV.pdf"
     document.body.appendChild(link)
     link.click()
