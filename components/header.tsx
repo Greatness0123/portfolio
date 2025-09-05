@@ -70,7 +70,7 @@ export function Header() {
           <div className="text-2xl font-bold gradient-text">GREATNESS OKORIE</div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8 relative">
+          <nav className="hidden md:flex items-center space-x-8 relative overflow-hidden">
             <div
               className="absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-300 ease-out"
               style={{
@@ -128,7 +128,7 @@ export function Header() {
             >
               Contact
             </button>
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <Button onClick={downloadCV} className="bg-primary hover:bg-primary/90 pulse-glow">
               <Download className="w-4 h-4 mr-2" />
               Download CV
@@ -137,7 +137,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-foreground">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

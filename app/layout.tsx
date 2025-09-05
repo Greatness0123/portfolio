@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: "Greatness Okorie - AI Engineer & Full-Stack Developer",
   description:
     "Professional portfolio of Greatness Okorie, an innovative AI Engineer and Full-Stack Developer specializing in intelligent systems and intuitive user experiences.",
-  generator: "v0.app",
   keywords: ["AI Engineer", "Full-Stack Developer", "Machine Learning", "React", "TypeScript", "Python"],
   authors: [{ name: "Greatness Okorie" }],
   openGraph: {

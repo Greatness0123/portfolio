@@ -71,7 +71,7 @@ export function Hero() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 pt-32">
-            <div className="w-48 h-48 mx-auto relative">
+            <div className="w-48 h-48 mx-auto relative max-w-[90vw] max-h-[90vw]">
               <div className="w-full h-full rounded-full border-4 border-blue-200 dark:border-blue-400 shadow-2xl float-animation glow-border overflow-hidden aspect-square">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20250816_112132.jpg-HEte2Ovfrmgb2iv4WBn6uGRxrE8Nnh.jpeg"
