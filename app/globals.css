@@ -227,3 +227,53 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 0.6s ease-out;
 }
+
+
+/* Enhanced project card hover effects */
+.project-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.1);
+}
+
+/* Pulse glow effect for buttons */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.pulse-glow:hover {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Glow border for profile image */
+@keyframes glow-border {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.glow-border {
+  animation: glow-border 3s ease-in-out infinite;
+}
+
+/* Enhanced hover effects for buttons */
+button:hover, .button:hover {
+  transform: translateY(-2px);
+}

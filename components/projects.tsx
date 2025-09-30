@@ -30,16 +30,30 @@ export function Projects() {
     },
   ]
 
-  const ongoingProjects = [
+  const newLiveProjects = [
+    {
+      title: "Control",
+      description:
+        "The AI-powered desktop assistant that lets you control your computer and browser using natural language. Command is control.",
+      image: "/screenshots/control-website-full.png",
+      tech: ["Python", "AI/ML", "Desktop", "Natural Language Processing", "Automation"],
+      liveUrl: "https://control-website.vercel.app/",
+      githubUrl: "https://github.com/Greatness0123/control-desktop",
+      status: "live",
+    },
     {
       title: "Index",
       description:
         "A place where users can find the right tools for their problems, weighed by cost, efficiency, and quality. It's like a shopping assistant but for software.",
-      image: "/software-tools-directory.png",
+      image: "/screenshots/index-website-full.png",
       tech: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
+      liveUrl: "https://index-tools.vercel.app",
       githubUrl: "https://github.com/Greatness0123/index",
-      status: "ongoing",
+      status: "live",
     },
+  ]
+
+  const ongoingProjects = [
     {
       title: "Aura Pilot",
       description:
@@ -74,11 +88,64 @@ export function Projects() {
             </p>
           </div>
 
-          {/* Live Projects */}
+          {/* Featured Live Projects */}
           <div className="mb-16">
             <h3 className="text-2xl font-semibold mb-8 text-primary flex items-center">
               <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-              Live Projects
+              Featured Live Projects
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              {newLiveProjects.map((project, index) => (
+                <Card key={index} className="project-card border-0 shadow-lg overflow-hidden group bg-card">
+                  <div className="aspect-video relative overflow-hidden">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between text-card-foreground">
+                      <span>{project.title}</span>
+                      <Badge className="bg-green-100 text-green-800 border-green-200 animate-pulse">Live</Badge>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.tech.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary" className="text-xs skill-tag">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex gap-3">
+                      <Button asChild className="bg-primary hover:bg-primary/90 pulse-glow">
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          View Demo
+                        </a>
+                      </Button>
+                      <Button variant="outline" asChild>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Other Live Projects */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-semibold mb-8 text-primary flex items-center">
+              <div className="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></div>
+              Other Live Projects
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               {liveProjects.map((project, index) => (
@@ -133,7 +200,7 @@ export function Projects() {
               <div className="w-3 h-3 bg-orange-500 rounded-full mr-3 animate-pulse"></div>
               Ongoing Development
             </h3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {ongoingProjects.map((project, index) => (
                 <Card key={index} className="project-card border-0 shadow-lg overflow-hidden group bg-card">
                   <div className="aspect-video relative overflow-hidden">
