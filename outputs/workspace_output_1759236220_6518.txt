@@ -1,0 +1,2 @@
+Navigating to https://control-website.vercel.app/features
+Capturing screenshot into public/screenshots/control-features.png

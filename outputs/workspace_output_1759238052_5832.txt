@@ -1,0 +1,3 @@
+Navigating to https://index-tools.vercel.app/
+Waiting for timeout 3000...
+Capturing screenshot into public/screenshots/index-tools-showcase.png

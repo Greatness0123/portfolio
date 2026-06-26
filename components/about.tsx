@@ -1,122 +1,111 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Code, Brain, Cloud, Zap } from "lucide-react"
+"use client"
+
+import dynamic from "next/dynamic"
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandX } from "@tabler/icons-react"
+import { FadeIn } from "@/components/shared/FadeIn"
+import { GhostText } from "@/components/shared/GhostText"
+
+const GitHubCalendar = dynamic(
+  () => import("react-github-calendar").then((mod) => mod.GitHubCalendar),
+  { ssr: false },
+)
+
+const socials = [
+  { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
+  { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie-ab508a263", label: "LinkedIn" },
+  { icon: IconBrandX, href: "https://x.com/Gruco01", label: "X" },
+  { icon: IconBrandInstagram, href: "https://instagram.com/gruco01", label: "Instagram" },
+]
+
+const stats = [
+  { label: "Projects shipped", value: "7+" },
+  { label: "Years building", value: "8+" },
+  { label: "Live products", value: "5+" },
+  { label: "Currently building", value: "SYNTHIA" },
+]
 
 export function About() {
-  const skills = [
-    { name: "TypeScript", description: "Strongly typed JavaScript for scalable applications" },
-    { name: "JavaScript", description: "Dynamic programming language for web development" },
-    { name: "Python", description: "Versatile language for AI, ML, and backend development" },
-    { name: "React", description: "Component-based library for building user interfaces" },
-    { name: "React Native", description: "Cross-platform mobile app development framework" },
-    { name: "Node.js", description: "JavaScript runtime for server-side development" },
-    { name: "Gradio", description: "Python library for building ML web interfaces" },
-    { name: "Electron", description: "Framework for building desktop apps with web technologies" },
-    { name: "Tailwind CSS", description: "Utility-first CSS framework for rapid UI development" },
-    { name: "NativeWind", description: "Tailwind CSS for React Native applications" },
-    { name: "Firebase", description: "Google's platform for mobile and web app development" },
-    { name: "Supabase", description: "Open source Firebase alternative with PostgreSQL" },
-    { name: "Appwrite", description: "Backend-as-a-Service platform for web and mobile apps" },
-    { name: "Expo", description: "Platform for universal React applications" },
-    { name: "Docker", description: "Containerization platform for application deployment" },
-    { name: "Vercel", description: "Cloud platform for static sites and serverless functions" },
-    { name: "GitHub Actions", description: "CI/CD platform for automating workflows" },
-    { name: "OpenAI", description: "AI platform providing GPT models and APIs" },
-    { name: "Hugging Face", description: "Platform for machine learning models and datasets" },
-    { name: "Anthropic", description: "AI safety company creating helpful, harmless AI" },
-    { name: "Ollama", description: "Tool for running large language models locally" },
-    { name: "DeepSeek", description: "AI research company focused on AGI development" },
-    { name: "Whisper", description: "OpenAI's speech recognition system" },
-    { name: "TTS", description: "Text-to-Speech synthesis technology" },
-  ]
-
-  const highlights = [
-    {
-      icon: Brain,
-      title: "AI & Machine Learning",
-      description:
-        "Specialized in LLM integration, prompt engineering, computer vision, and building conversational AI systems with cutting-edge models.",
-      color: "text-blue-500",
-    },
-    {
-      icon: Code,
-      title: "Full-Stack Development",
-      description:
-        "Expert in React, React Native, Node.js, and TypeScript. Building scalable cross-platform applications with modern architectures.",
-      color: "text-green-500",
-    },
-    {
-      icon: Cloud,
-      title: "Cloud & Infrastructure",
-      description:
-        "Proficient with Firebase, Supabase, Vercel, and Docker. Implementing secure, scalable cloud solutions with CI/CD pipelines.",
-      color: "text-purple-500",
-    },
-    {
-      icon: Zap,
-      title: "AI Integrations",
-      description:
-        "Seamlessly integrating OpenAI, Hugging Face, Anthropic, and other AI services into production applications.",
-      color: "text-orange-500",
-    },
-  ]
-
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">About Me</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              I'm passionate about creating innovative solutions that bridge the gap between artificial intelligence and
-              user experience. Based in Lagos, Nigeria, I transform complex technical challenges into elegant, scalable
-              applications. I integrate artificial intelligence into my development workflow to improve efficiency,
-              automate repetitive tasks, and deliver smarter solutions that enhance user experiences and business
-              outcomes.
-            </p>
-          </div>
+    <section id="about" className="relative overflow-hidden bg-bg px-4 py-20 sm:px-6 md:px-10 md:py-24">
+      <GhostText text="ABOUT" />
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {highlights.map((highlight, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div
-                      className={`p-3 rounded-lg bg-muted/50 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <highlight.icon className={`w-6 h-6 ${highlight.color}`} />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold mb-3 text-primary">{highlight.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">{highlight.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <FadeIn className="relative z-10 mx-auto max-w-6xl">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
+          <div>
+            <div className="mb-6 overflow-hidden rounded-2xl border border-black/10 bg-surface p-3 sm:p-4">
+              <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted">
+                GitHub activity
+              </p>
+              <div className="overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-accent/40">
+                <div className="min-w-[300px]">
+                  <GitHubCalendar
+                    username="Greatness0123"
+                    colorScheme="light"
+                    theme={{
+                      light: ["#ebedf0", "#c8f135"],
+                      dark: ["#161616", "#c8f135"],
+                    }}
+                    fontSize={11}
+                    blockSize={10}
+                    blockMargin={3}
+                  />
+                </div>
+              </div>
+            </div>
 
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold mb-8 text-primary">Technical Skills</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {skills.map((skill, index) => (
-                <div key={index} className="relative group">
-                  <Badge
-                    variant="secondary"
-                    className="skill-tag px-4 py-2 text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 hover:scale-105 transition-all duration-300 cursor-pointer border border-primary/20 hover:border-primary/40"
-                  >
-                    {skill.name}
-                  </Badge>
-                  {/* Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-popover text-popover-foreground text-xs rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 w-48 max-w-[calc(100vw-2rem)] text-center border">
-                    {skill.description}
-                  </div>
+            <div className="grid grid-cols-2 gap-3">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-black/10 bg-surface p-4"
+                >
+                  <p className="mb-1 font-mono text-[10px] uppercase tracking-wider text-muted">
+                    {stat.label}
+                  </p>
+                  <p className="font-[family-name:var(--font-display)] text-base font-bold text-text sm:text-lg">
+                    {stat.value}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
+
+          <div className="flex flex-col justify-center">
+            <h2 className="mb-6 font-[family-name:var(--font-display)] text-[clamp(28px,5vw,36px)] font-extrabold leading-tight text-text sm:mb-8">
+              I build things that think.
+            </h2>
+
+            <div className="space-y-4 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-muted sm:space-y-5 sm:text-base">
+              <p>
+                I&apos;m Greatness Okorie — an AI engineer, full-stack developer, and founder. Studying
+                Computer Science at Bells University of Technology while shipping real products in parallel.
+              </p>
+              <p>
+                My workflow is architecture-first. I direct AI coding agents — Cursor, Jules, OpenCode — to
+                implement while I own system design, product vision, and problem diagnosis.
+              </p>
+              <p>
+                Previously applied to Y Combinator for Control. Currently deep in BellsAttend+ and SYNTHIA.
+              </p>
+            </div>
+
+            <div className="mt-6 flex items-center gap-5 sm:mt-8">
+              {socials.map(({ icon: Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="rounded-full p-1 text-muted transition-colors hover:text-accent"
+                >
+                  <Icon size={20} stroke={1.5} />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      </FadeIn>
     </section>
   )
 }

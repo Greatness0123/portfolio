@@ -1,0 +1,2 @@
+Navigating to https://index-tools.vercel.app/
+Capturing screenshot into public/screenshots/index-homepage.png

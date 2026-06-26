@@ -1,0 +1,16 @@
+./app/layout.tsx
+./app/page.tsx
+./components/about.tsx
+./components/contact.tsx
+./components/footer.tsx
+./components/header.tsx
+./components/hero.tsx
+./components/projects.tsx
+./components/theme-provider.tsx
+./components/theme-toggle.tsx
+./components/ui/badge.tsx
+./components/ui/button.tsx
+./components/ui/card.tsx
+./components/ui/input.tsx
+./components/ui/textarea.tsx
+./lib/utils.ts

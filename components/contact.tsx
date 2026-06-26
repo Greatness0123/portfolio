@@ -1,198 +1,134 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Phone, MapPin, Github, Linkedin, MessageCircle, Send } from "lucide-react"
+import {
+  IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
+  IconBrandX,
+} from "@tabler/icons-react"
+import { toast } from "sonner"
+import { FadeIn } from "@/components/shared/FadeIn"
+import { GhostText } from "@/components/shared/GhostText"
+import { MagneticButton } from "@/components/shared/MagneticButton"
+import Image from "next/image"
+
+const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/FORM_ID/formResponse"
+const ENTRY_NAME = "entry.XXXXXXXXX"
+const ENTRY_EMAIL = "entry.YYYYYYYYY"
+const ENTRY_MESSAGE = "entry.ZZZZZZZZZ"
+
+const socials = [
+  { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
+  { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie-ab508a263", label: "LinkedIn" },
+  { icon: IconBrandX, href: "https://x.com/Gruco01", label: "X" },
+  { icon: IconBrandInstagram, href: "https://instagram.com/gruco01", label: "Instagram" },
+  { icon: IconBrandWhatsapp, href: "https://wa.me/qr/BLILCEKHZL3AO1", label: "WhatsApp" },
+]
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`)
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)
-    window.location.href = `mailto:greatnessokorie02@gmail.com?subject=${subject}&body=${body}`
+    setLoading(true)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    try {
+      await fetch(GOOGLE_FORM_ACTION_URL, {
+        method: "POST",
+        mode: "no-cors",
+        body: new URLSearchParams({
+          [ENTRY_NAME]: formData.get("name") as string,
+          [ENTRY_EMAIL]: formData.get("email") as string,
+          [ENTRY_MESSAGE]: formData.get("message") as string,
+        }),
+      })
+    } catch {
+      // no-cors always resolves
+    }
+
+    setSubmitted(true)
+    setLoading(false)
+    toast.success("Message sent! I'll get back to you soon.")
   }
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "greatnessokorie02@gmail.com",
-      href: "mailto:greatnessokorie02@gmail.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+234 91 65 211 677",
-      href: "tel:+2349165211677",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Lagos, Nigeria",
-      href: null,
-    },
-  ]
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com/Greatness0123",
-      color: "hover:text-gray-900 dark:hover:text-gray-100",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/greatness-okorie-ab508a263",
-      color: "hover:text-blue-600",
-    },
-    {
-      icon: MessageCircle,
-      label: "WhatsApp",
-      href: "https://wa.me/qr/BLILCEKHZL3AO1",
-      color: "hover:text-green-600",
-    },
-    {
-      icon: Send,
-      label: "Telegram",
-      href: "http://t.me/Gruco01",
-      color: "hover:text-blue-500",
-    },
-  ]
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Get In Touch</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Ready to collaborate on your next AI or full-stack project? Let's discuss how we can bring your ideas to
-              life.
+    <section id="contact" className="relative overflow-hidden bg-bg px-4 py-20 sm:px-6 md:px-10 md:py-24">
+      <GhostText text="CONTACT" />
+
+      <FadeIn className="relative z-10 mx-auto max-w-xl">
+        {/* <div className="pointer-events-none absolute -left-2 top-8 z-0 h-24 w-24 opacity-80 sm:-left-8 sm:h-32 sm:w-32">
+          <Image src="/characters/sad.png" alt="" fill className="object-contain" sizes="128px" />
+        </div> */}
+
+        <div className="relative z-10">
+        <h2 className="mb-3 font-[family-name:var(--font-display)] text-[clamp(32px,5vw,48px)] font-extrabold text-text">
+          Let&apos;s build something.
+        </h2>
+        <p className="mb-10 font-[family-name:var(--font-inter)] text-base text-muted">
+          Open to collabs, freelance, and conversations worth having.
+        </p>
+
+        {submitted ? (
+          <div className="rounded-2xl border border-accent/20 bg-surface p-8 text-center">
+            <p className="mb-2 font-[family-name:var(--font-display)] text-xl font-bold text-text">
+              Message received.
+            </p>
+            <p className="font-[family-name:var(--font-inter)] text-sm text-muted">
+              Thanks for reaching out — I&apos;ll get back to you soon.
             </p>
           </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              name="name"
+              required
+              placeholder="Name"
+              className="w-full rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
+            />
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Email"
+              className="w-full rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
+            />
+            <textarea
+              name="message"
+              required
+              rows={5}
+              placeholder="Message"
+              className="w-full resize-none rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
+            />
+            <MagneticButton type="submit">
+              <span className="block w-full rounded-2xl bg-accent py-3 text-center font-mono text-[12px] uppercase text-bg transition-opacity hover:opacity-90 disabled:opacity-50">
+                {loading ? "Sending..." : "Send message"}
+              </span>
+            </MagneticButton>
+          </form>
+        )}
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="border-0 shadow-lg glow-border">
-              <CardHeader>
-                <CardTitle className="text-2xl">Send a Message</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Input
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="h-12 transition-all duration-300 focus:scale-[1.02]"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="h-12 transition-all duration-300 focus:scale-[1.02]"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      className="resize-none transition-all duration-300 focus:scale-[1.02]"
-                    />
-                  </div>
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90 h-12 pulse-glow">
-                    <Send className="w-4 h-4 mr-2" />
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              {/* Contact Details */}
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Contact Information</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-center space-x-4 group">
-                      <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <info.icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="font-medium text-primary">{info.label}</p>
-                        {info.href ? (
-                          <a href={info.href} className="text-muted-foreground hover:text-primary transition-colors">
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-muted-foreground">{info.value}</p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-
-              {/* Social Links */}
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-2xl">Connect With Me</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-4">
-                    {socialLinks.map((social, index) => (
-                      <a
-                        key={index}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`flex items-center space-x-3 p-4 rounded-lg border border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 ${social.color}`}
-                      >
-                        <social.icon className="w-5 h-5" />
-                        <span className="font-medium">{social.label}</span>
-                      </a>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+        <div className="mt-10 flex items-center justify-center gap-4">
+          {socials.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/[0.03] text-muted backdrop-blur-sm transition-all hover:-translate-y-1 hover:text-accent"
+            >
+              <Icon size={20} stroke={1.5} />
+            </a>
+          ))}
         </div>
-      </div>
+        </div>
+      </FadeIn>
     </section>
   )
 }

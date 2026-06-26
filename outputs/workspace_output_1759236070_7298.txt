@@ -1,0 +1,18 @@
+total 316
+drwxr-xr-x 8 root root   4096 Sep 30 12:41 .
+drwxr-xr-x 4 root root     69 Sep 30 12:41 ..
+drwxr-xr-x 8 root root   4096 Sep 30 12:41 .git
+-rw-r--r-- 1 root root    313 Sep 30 12:41 .gitignore
+-rw-r--r-- 1 root root   1213 Sep 30 12:41 README.md
+drwxr-xr-x 2 root root     75 Sep 30 12:41 app
+drwxr-xr-x 3 root root   4096 Sep 30 12:41 components
+-rw-r--r-- 1 root root    426 Sep 30 12:41 components.json
+drwxr-xr-x 2 root root     22 Sep 30 12:41 lib
+-rw-r--r-- 1 root root    227 Sep 30 12:41 next.config.mjs
+-rw-r--r-- 1 root root 144984 Sep 30 12:41 package-lock.json
+-rw-r--r-- 1 root root   2253 Sep 30 12:41 package.json
+-rw-r--r-- 1 root root 128468 Sep 30 12:41 pnpm-lock.yaml
+-rw-r--r-- 1 root root    144 Sep 30 12:41 postcss.config.mjs
+drwxr-xr-x 2 root root   4096 Sep 30 12:41 public
+drwxr-xr-x 2 root root     33 Sep 30 12:41 styles
+-rw-r--r-- 1 root root    595 Sep 30 12:41 tsconfig.json

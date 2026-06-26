@@ -1,0 +1,2 @@
+Navigating to https://control-website.vercel.app/
+Capturing screenshot into public/screenshots/control-hero-full.png

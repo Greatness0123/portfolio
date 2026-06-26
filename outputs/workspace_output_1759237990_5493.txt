@@ -1,0 +1,3 @@
+Navigating to https://control-website.vercel.app/
+Waiting for timeout 5000...
+Capturing screenshot into public/screenshots/control-website-full.png
