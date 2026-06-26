@@ -45,17 +45,26 @@
     color: #FFFFFF;
   }
 
-  ::-webkit-scrollbar {
+  html::-webkit-scrollbar {
     width: 6px;
   }
 
-  ::-webkit-scrollbar-track {
+  html::-webkit-scrollbar-track {
     background: #FFFFFF;
   }
 
-  ::-webkit-scrollbar-thumb {
+  html::-webkit-scrollbar-thumb {
     background: #000000;
     border-radius: 3px;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

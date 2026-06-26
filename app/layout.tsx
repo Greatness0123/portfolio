@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   title: "Greatness Okorie — AI Engineer & Builder",
   description:
     "Portfolio of Greatness Okorie — AI engineer, full-stack developer, and founder based in Lagos, Nigeria.",
+  icons: {
+    icon: "/bright-smile.png",
+  },
   openGraph: {
     title: "Greatness Okorie — AI Engineer & Builder",
     description: "Building systems that think, interfaces that feel, and products that ship.",

@@ -23,7 +23,7 @@ const socials = [
   { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
   { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie-ab508a263", label: "LinkedIn" },
   { icon: IconBrandX, href: "https://x.com/Gruco01", label: "X" },
-  { icon: IconBrandInstagram, href: "https://instagram.com/gruco01", label: "Instagram" },
+  { icon: IconBrandInstagram, href: "https://instagram.com/greatness-okorie", label: "Instagram" },
   { icon: IconBrandWhatsapp, href: "https://wa.me/qr/BLILCEKHZL3AO1", label: "WhatsApp" },
 ]
 
@@ -58,7 +58,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-bg px-4 py-20 sm:px-6 md:px-10 md:py-24">
+    <section id="contact" className="relative overflow-hidden bg-bg px-4 py-10 sm:px-6 md:px-10 md:py-16">
       <GhostText text="CONTACT" />
 
       <FadeIn className="relative z-10 mx-auto max-w-xl">
@@ -106,7 +106,7 @@ export function Contact() {
               className="w-full resize-none rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
             />
             <MagneticButton type="submit">
-              <span className="block w-full rounded-2xl bg-accent py-3 text-center font-mono text-[12px] uppercase text-bg transition-opacity hover:opacity-90 disabled:opacity-50">
+              <span className="block w-full rounded-2xl bg-accent px-6 py-3.5 text-center font-mono text-[12px] uppercase text-bg transition-opacity hover:opacity-90 disabled:opacity-50">
                 {loading ? "Sending..." : "Send message"}
               </span>
             </MagneticButton>

@@ -15,7 +15,7 @@ export function BrandIcon({ slug, name, size = 18 }: BrandIconProps) {
   if (failed) {
     return (
       <span
-        className="flex shrink-0 items-center justify-center rounded-full bg-white/5 font-mono text-[9px] text-muted"
+        className="flex shrink-0 items-center justify-center rounded-full bg-black/5 font-mono text-[9px] text-muted"
         style={{ width: size, height: size }}
       >
         {name.charAt(0)}
@@ -25,7 +25,7 @@ export function BrandIcon({ slug, name, size = 18 }: BrandIconProps) {
 
   return (
     <Image
-      src={`https://cdn.simpleicons.org/${slug}/F0EDE6`}
+      src={`https://cdn.simpleicons.org/${slug}/000000`}
       alt={name}
       width={size}
       height={size}

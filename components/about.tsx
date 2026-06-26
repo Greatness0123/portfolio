@@ -13,8 +13,8 @@ const GitHubCalendar = dynamic(
 const socials = [
   { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
   { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie-ab508a263", label: "LinkedIn" },
-  { icon: IconBrandX, href: "https://x.com/Gruco01", label: "X" },
-  { icon: IconBrandInstagram, href: "https://instagram.com/gruco01", label: "Instagram" },
+  { icon: IconBrandX, href: "https://x.com/Greatness0123", label: "X" },
+  { icon: IconBrandInstagram, href: "https://instagram.com/greatness-okorie", label: "Instagram" },
 ]
 
 const stats = [
@@ -26,30 +26,28 @@ const stats = [
 
 export function About() {
   return (
-    <section id="about" className="relative overflow-hidden bg-bg px-4 py-20 sm:px-6 md:px-10 md:py-24">
+    <section id="about" className="relative overflow-hidden bg-bg px-4 py-10 sm:px-6 md:px-10 md:py-16">
       <GhostText text="ABOUT" />
 
       <FadeIn className="relative z-10 mx-auto max-w-6xl">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
-          <div>
-            <div className="mb-6 overflow-hidden rounded-2xl border border-black/10 bg-surface p-3 sm:p-4">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
+          <div className="min-w-0">
+            <div className="mb-4 rounded-2xl border border-black/10 bg-surface p-3 sm:p-4">
               <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted">
                 GitHub activity
               </p>
-              <div className="overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-accent/40">
-                <div className="min-w-[300px]">
-                  <GitHubCalendar
-                    username="Greatness0123"
-                    colorScheme="light"
-                    theme={{
-                      light: ["#ebedf0", "#c8f135"],
-                      dark: ["#161616", "#c8f135"],
-                    }}
-                    fontSize={11}
-                    blockSize={10}
-                    blockMargin={3}
-                  />
-                </div>
+              <div className="no-scrollbar w-full overflow-x-auto -mx-1 px-1 pb-2" style={{ WebkitOverflowScrolling: "touch" }}>
+                <GitHubCalendar
+                  username="Greatness0123"
+                  colorScheme="light"
+                  theme={{
+                    light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+                    dark: ["#161616", "#0e4429", "#006d32", "#26a641", "#39d353"],
+                  }}
+                  fontSize={11}
+                  blockSize={10}
+                  blockMargin={3}
+                />
               </div>
             </div>
 
@@ -77,11 +75,11 @@ export function About() {
 
             <div className="space-y-4 font-[family-name:var(--font-inter)] text-sm leading-relaxed text-muted sm:space-y-5 sm:text-base">
               <p>
-                I&apos;m Greatness Okorie — an AI engineer, full-stack developer, and founder. Studying
+                I&apos;m Greatness Okorie, an AI engineer, full-stack developer, and founder. Studying
                 Computer Science at Bells University of Technology while shipping real products in parallel.
               </p>
               <p>
-                My workflow is architecture-first. I direct AI coding agents — Cursor, Jules, OpenCode — to
+                My workflow is architecture-first. I direct AI coding agents; Cursor, Jules, OpenCode to
                 implement while I own system design, product vision, and problem diagnosis.
               </p>
               <p>

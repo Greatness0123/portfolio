@@ -21,7 +21,7 @@ function FolderShape({
     <>
       <div
         className={cn(
-          "relative z-10 ml-4 inline-block rounded-t-lg border border-b-0 border-black/10 px-3 py-1.5 sm:px-4 sm:py-2",
+          "relative z-10 ml-6 inline-block rounded-t-lg border border-b-0 border-black/10 px-4 py-2 sm:ml-8 sm:px-5 sm:py-2.5",
           isTop ? "border-accent/40 bg-[#E8E4DD]" : "bg-[#DDD8D0]",
         )}
       >
@@ -31,7 +31,7 @@ function FolderShape({
       </div>
       <div
         className={cn(
-          "-mt-px h-28 rounded-2xl rounded-tl-sm border border-black/10 sm:h-32",
+          "-mt-px h-40 rounded-2xl rounded-tl-sm border border-black/10 sm:h-48",
           isTop && "border-accent/30",
         )}
         style={{ backgroundColor: BODY_TONES[stackPosition] ?? BODY_TONES[4] }}
@@ -53,7 +53,7 @@ export function Folder({ project, stackPosition, isTop, onClick }: FolderProps) 
   }
 
   const className = cn(
-    "absolute left-1/2 w-[min(92vw,320px)] text-left sm:w-[360px]",
+    "absolute left-1/2 w-[min(88vw,340px)] text-left sm:w-[400px]",
     isTop && "cursor-pointer",
   )
 

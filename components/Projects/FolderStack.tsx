@@ -66,7 +66,7 @@ export function FolderStack() {
   )
 
   return (
-    <section id="work" className="relative min-h-screen bg-bg px-4 py-20 sm:px-6 md:px-10 md:py-24">
+    <section id="work" className="relative overflow-hidden bg-bg px-4 py-10 sm:px-6 sm:min-h-screen md:px-10 md:py-16">
       {/* Mobile: ghost text behind folders */}
       <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center overflow-hidden md:hidden">
         <WorkText className="opacity-[0.06]" />
@@ -131,7 +131,7 @@ export function FolderStack() {
               {/* Desktop: grid with folders on left, WORK text on right */}
               <div className="hidden items-center gap-12 md:grid md:grid-cols-[1fr_auto]">
                 {/* Left: folder stack */}
-                <div className="relative mx-auto h-[300px] w-full max-w-[400px]">
+                <div className="relative mx-auto h-[340px] w-full max-w-[400px]">
                   {stackProjects.map(({ project, projectIndex, stackPosition }) => (
                     <Folder
                       key={`${project.id}-${stackPosition}`}
@@ -151,7 +151,7 @@ export function FolderStack() {
 
               {/* Mobile: centered folder stack (ghost text is behind via absolute parent) */}
               <div className="flex flex-col items-center md:hidden">
-                <div className="relative mx-auto h-[260px] w-full max-w-[360px] sm:h-[300px] sm:max-w-[400px]">
+                <div className="relative mx-auto h-[300px] w-full max-w-[360px] sm:h-[340px] sm:max-w-[400px]">
                   {stackProjects.map(({ project, projectIndex, stackPosition }) => (
                     <Folder
                       key={`${project.id}-${stackPosition}`}
