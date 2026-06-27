@@ -1,10 +1,10 @@
 import { Nav } from "@/components/Nav"
-import { Hero } from "@/components/Hero"
+import { Hero } from "@/components/hero"
 import { Tools } from "@/components/Tools"
 import { FolderStack } from "@/components/Projects/FolderStack"
-import { About } from "@/components/About"
-import { Contact } from "@/components/Contact"
-import { Footer } from "@/components/Footer"
+import { About } from "@/components/about"
+import { Contact } from "@/components/contact"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
