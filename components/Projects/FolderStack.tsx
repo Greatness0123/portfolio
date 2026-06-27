@@ -72,19 +72,22 @@ export function FolderStack() {
         <WorkText className="opacity-[0.06]" />
       </div>
 
-      <FadeIn className="relative z-10 mx-auto max-w-6xl">
-        <p className="mb-8 font-mono text-[10px] uppercase tracking-widest text-accent sm:mb-10">
-          selected projects
-        </p>
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <FadeIn>
+          <p className="mb-8 font-mono text-[10px] uppercase tracking-widest text-accent sm:mb-10">
+            selected projects
+          </p>
+        </FadeIn>
 
         <AnimatePresence mode="wait">
           {isExpanded ? (
             <motion.div
               key="card"
               className="relative w-full"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
                 <button
@@ -124,13 +127,13 @@ export function FolderStack() {
             <motion.div
               key="stack"
               className="relative w-full"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
               {/* Desktop: grid with folders on left, WORK text on right */}
               <div className="hidden items-center gap-12 md:grid md:grid-cols-[1fr_auto]">
-                {/* Left: folder stack */}
                 <div className="relative mx-auto h-[340px] w-full max-w-[400px]">
                   {stackProjects.map(({ project, projectIndex, stackPosition }) => (
                     <Folder
@@ -143,13 +146,12 @@ export function FolderStack() {
                   ))}
                 </div>
 
-                {/* Right: WORK outline text */}
                 <div className="flex items-center justify-center">
                   <WorkText />
                 </div>
               </div>
 
-              {/* Mobile: centered folder stack (ghost text is behind via absolute parent) */}
+              {/* Mobile: centered folder stack */}
               <div className="flex flex-col items-center md:hidden">
                 <div className="relative mx-auto h-[300px] w-full max-w-[360px] sm:h-[340px] sm:max-w-[400px]">
                   {stackProjects.map(({ project, projectIndex, stackPosition }) => (
@@ -189,7 +191,7 @@ export function FolderStack() {
             </motion.div>
           )}
         </AnimatePresence>
-      </FadeIn>
+      </div>
     </section>
   )
 }

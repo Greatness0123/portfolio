@@ -12,7 +12,6 @@ import { toast } from "sonner"
 import { FadeIn } from "@/components/shared/FadeIn"
 import { GhostText } from "@/components/shared/GhostText"
 import { MagneticButton } from "@/components/shared/MagneticButton"
-import Image from "next/image"
 
 const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/FORM_ID/formResponse"
 const ENTRY_NAME = "entry.XXXXXXXXX"
@@ -62,71 +61,68 @@ export function Contact() {
       <GhostText text="CONTACT" />
 
       <FadeIn className="relative z-10 mx-auto max-w-xl">
-        {/* <div className="pointer-events-none absolute -left-2 top-8 z-0 h-24 w-24 opacity-80 sm:-left-8 sm:h-32 sm:w-32">
-          <Image src="/characters/sad.png" alt="" fill className="object-contain" sizes="128px" />
-        </div> */}
-
         <div className="relative z-10">
-        <h2 className="mb-3 font-[family-name:var(--font-display)] text-[clamp(32px,5vw,48px)] font-extrabold text-text">
-          Let&apos;s build something.
-        </h2>
-        <p className="mb-10 font-[family-name:var(--font-inter)] text-base text-muted">
-          Open to collabs, freelance, and conversations worth having.
-        </p>
+          <h2 className="mb-3 font-[family-name:var(--font-display)] text-[clamp(32px,5vw,48px)] font-extrabold text-text">
+            Let&apos;s build something.
+          </h2>
 
-        {submitted ? (
-          <div className="rounded-2xl border border-accent/20 bg-surface p-8 text-center">
-            <p className="mb-2 font-[family-name:var(--font-display)] text-xl font-bold text-text">
-              Message received.
-            </p>
-            <p className="font-[family-name:var(--font-inter)] text-sm text-muted">
-              Thanks for reaching out — I&apos;ll get back to you soon.
-            </p>
+          <p className="mb-10 font-[family-name:var(--font-inter)] text-base text-muted">
+            Open to collabs, freelance, and conversations worth having.
+          </p>
+
+          {submitted ? (
+            <div className="rounded-2xl border border-accent/20 bg-surface p-8 text-center">
+              <p className="mb-2 font-[family-name:var(--font-display)] text-xl font-bold text-text">
+                Message received.
+              </p>
+              <p className="font-[family-name:var(--font-inter)] text-sm text-muted">
+                Thanks for reaching out — I&apos;ll get back to you soon.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                name="name"
+                required
+                placeholder="Name"
+                className="w-full rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
+              />
+              <input
+                name="email"
+                type="email"
+                required
+                placeholder="Email"
+                className="w-full rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
+              />
+              <textarea
+                name="message"
+                required
+                rows={5}
+                placeholder="Message"
+                className="w-full resize-none rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
+              />
+              <MagneticButton type="submit">
+                <span className="block w-full rounded-2xl bg-accent px-6 py-3.5 text-center font-mono text-[12px] uppercase text-bg transition-opacity hover:opacity-90 disabled:opacity-50">
+                  {loading ? "Sending..." : "Send message"}
+                </span>
+              </MagneticButton>
+            </form>
+          )}
+
+          <div className="mt-10 flex items-center justify-center gap-4">
+            {socials.map(({ icon: Icon, href, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/[0.03] text-muted backdrop-blur-sm transition-all hover:-translate-y-1 hover:text-accent"
+              >
+                <Icon size={20} stroke={1.5} />
+              </a>
+            ))}
           </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              name="name"
-              required
-              placeholder="Name"
-              className="w-full rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
-            />
-            <input
-              name="email"
-              type="email"
-              required
-              placeholder="Email"
-              className="w-full rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
-            />
-            <textarea
-              name="message"
-              required
-              rows={5}
-              placeholder="Message"
-              className="w-full resize-none rounded-2xl border border-black/10 bg-surface px-4 py-3 font-[family-name:var(--font-inter)] text-sm text-text outline-none transition-colors placeholder:text-muted focus:border-accent"
-            />
-            <MagneticButton type="submit">
-              <span className="block w-full rounded-2xl bg-accent px-6 py-3.5 text-center font-mono text-[12px] uppercase text-bg transition-opacity hover:opacity-90 disabled:opacity-50">
-                {loading ? "Sending..." : "Send message"}
-              </span>
-            </MagneticButton>
-          </form>
-        )}
-
-        <div className="mt-10 flex items-center justify-center gap-4">
-          {socials.map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-white/[0.03] text-muted backdrop-blur-sm transition-all hover:-translate-y-1 hover:text-accent"
-            >
-              <Icon size={20} stroke={1.5} />
-            </a>
-          ))}
-        </div>
         </div>
       </FadeIn>
     </section>

@@ -1,7 +1,6 @@
 "use client"
 
 import {
-  IconBrain,
   IconCode,
   IconCpu,
   IconRocket,
@@ -15,7 +14,7 @@ import {
 
 const icons = [
   // Hero overlap — large, subtle
-  { Icon: IconBrain, top: "20%", left: "6%", size: 72, rotate: -15, opacity: 0.06 },
+  { Icon: IconBulb, top: "20%", left: "6%", size: 72, rotate: -15, opacity: 0.06 },
   { Icon: IconCode, top: "30%", right: "5%", size: 64, rotate: 10, opacity: 0.05 },
   { Icon: IconCpu, top: "50%", left: "4%", size: 56, rotate: -8, opacity: 0.04 },
 

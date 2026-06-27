@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { InfiniteMarquee } from "./shared/InfiniteMarquee"
+import { FadeIn } from "./shared/FadeIn"
 
 const tools = [
   { name: "TypeScript", slug: "typescript" },
@@ -21,14 +22,8 @@ const tools = [
   { name: "Gradio", slug: "gradio" },
   { name: "FastAPI", slug: "fastapi" },
   { name: "Flask", slug: "flask" },
-  // { name: "GraphQL", slug: "graphql" },
-  // { name: "tRPC", slug: "trpc" },
-  // { name: "Prisma", slug: "prisma" },
-  // { name: "Drizzle", slug: "drizzle" },
   { name: "Vite", slug: "vite" },
   { name: "Vitest", slug: "vitest" },
-  // { name: "Zod", slug: "zod" },
-  // { name: "Turborepo", slug: "turborepo" },
   { name: "Bun", slug: "bun" },
   { name: "Rust", slug: "rust" },
   { name: "Supabase", slug: "supabase" },
@@ -49,8 +44,6 @@ const tools = [
   { name: "Qwen", slug: "qwen" },
   { name: "Google Cloud", slug: "googlecloud" },
   { name: "MongoDB", slug: "mongodb" },
-  // { name: "SQLite", slug: "sqlite" },
-  // { name: "Upstash", slug: "upstash" },
   { name: "Resend", slug: "resend" },
   { name: "Anthropic", slug: "anthropic" },
   { name: "googlejules", slug: "googlejules" },
@@ -63,7 +56,6 @@ const tools = [
   { name: "Cursor", slug: "cursor" },
   { name: "ElevenLabs", slug: "elevenlabs" },
   { name: "github copilot", slug: "githubcopilot" },
-  // { name: "cursor", slug: "cursor" },
   { name: "Replicate", slug: "replicate" },
   { name: "LangChain", slug: "langchain" },
   { name: "minimax", slug: "minimax" },
@@ -71,20 +63,13 @@ const tools = [
   { name: "stripe", slug: "stripe" },
   { name: "Figma", slug: "figma" },
   { name: "opencode", slug: "opencode" },
-  // { name: "Notion", slug: "notion" },
   { name: "kalilinux", slug: "kalilinux" },
   { name: "Postman", slug: "postman" },
-  // { name: "Discord", slug: "discord" },
-  // { name: "Spotify", slug: "spotify" },
   { name: "burpsuite", slug: "burpsuite" },
   { name: "virtualbox", slug: "virtualbox" },
   { name: "obsstudio", slug: "obsstudio" },
   { name: "jupyter", slug: "jupyter" },
   { name: "androidstudio", slug: "androidstudio" },
-  // { name: "Google Chrome", slug: "googlechrome" },
-  // { name: "pinterest", slug: "pinterest" },
-  // { name: "Canva", slug: "canva" },
-  // { name: "WhatsApp", slug: "whatsapp" },
 ]
 
 const ROW_COUNT = 3
@@ -172,50 +157,56 @@ function StackText({ className }: { className?: string }) {
   )
 }
 
+function DesktopPillGrid() {
+  return (
+    <div className="hidden grid-cols-[1fr_auto_1fr] gap-x-6 gap-y-3 py-6 sm:gap-x-8 sm:gap-y-4 sm:py-10 md:grid">
+      <div className="col-span-3 flex flex-wrap justify-center gap-2">
+        {desktopTop.map((tool) => (
+          <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
+        ))}
+      </div>
+
+      <div className="flex flex-wrap justify-end gap-2">
+        {desktopLeft.map((tool) => (
+          <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
+        ))}
+      </div>
+
+      <StackText className="px-2" />
+
+      <div className="flex flex-wrap justify-start gap-2">
+        {desktopRight.map((tool) => (
+          <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
+        ))}
+      </div>
+
+      <div className="col-span-3 flex flex-wrap justify-center gap-2">
+        {desktopBottom.map((tool) => (
+          <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function MobileMarquees() {
+  return (
+    <div className="flex flex-col gap-4 py-2 sm:py-10 md:hidden">
+      <StackText className="py-4" />
+      <MarqueeRow items={row1} direction="left" speed={55} />
+      <MarqueeRow items={row2} direction="right" speed={60} />
+      <MarqueeRow items={row3} direction="left" speed={65} />
+    </div>
+  )
+}
+
 export function Tools() {
   return (
     <section className="relative overflow-hidden bg-bg px-6 pt-4 pb-10 md:px-10 md:py-16">
-      <div className="mx-auto max-w-5xl">
-        {/* Mobile: header + 3 marquee rows */}
-        <div className="flex flex-col gap-4 py-2 sm:py-10 md:hidden">
-          <StackText className="py-4" />
-          <MarqueeRow items={row1} direction="left" speed={55} />
-          <MarqueeRow items={row2} direction="right" speed={60} />
-          <MarqueeRow items={row3} direction="left" speed={65} />
-        </div>
-
-        {/* Desktop: pills on all sides of the text */}
-        <div className="hidden grid-cols-[1fr_auto_1fr] gap-x-6 gap-y-3 py-6 sm:gap-x-8 sm:gap-y-4 sm:py-10 md:grid">
-          {/* Top row — spans all columns */}
-          <div className="col-span-3 flex flex-wrap justify-center gap-2">
-            {desktopTop.map((tool) => (
-              <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
-            ))}
-          </div>
-
-          {/* Middle row — left pills | text | right pills */}
-          <div className="flex flex-wrap justify-end gap-2">
-            {desktopLeft.map((tool) => (
-              <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
-            ))}
-          </div>
-
-          <StackText className="px-2" />
-
-          <div className="flex flex-wrap justify-start gap-2">
-            {desktopRight.map((tool) => (
-              <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
-            ))}
-          </div>
-
-          {/* Bottom row — spans all columns */}
-          <div className="col-span-3 flex flex-wrap justify-center gap-2">
-            {desktopBottom.map((tool) => (
-              <ToolPill key={tool.slug} slug={tool.slug} name={tool.name} />
-            ))}
-          </div>
-        </div>
-      </div>
+      <FadeIn className="mx-auto max-w-5xl" direction="up">
+        <MobileMarquees />
+        <DesktopPillGrid />
+      </FadeIn>
     </section>
   )
 }
