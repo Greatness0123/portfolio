@@ -94,7 +94,7 @@ export function Hero() {
             fontSize: "clamp(9px, 1.2vw, 14px)",
             letterSpacing: "0.3em",
             left: "clamp(20px, 8vw, 120px)",
-            top: "102%",
+            top: "108%",
           }}
         >
           Fullstack Developer
@@ -125,7 +125,7 @@ export function Hero() {
             fontSize: "clamp(9px, 1.2vw, 14px)",
             letterSpacing: "0.3em",
             right: "clamp(20px, 8vw, 120px)",
-            top: "102%",
+            top: "108%",
           }}
         >
           Founder
