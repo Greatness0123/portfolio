@@ -1,7 +1,7 @@
 "use client"
 
 import dynamic from "next/dynamic"
-import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandX } from "@tabler/icons-react"
+import { IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandTelegram, IconBrandX } from "@tabler/icons-react"
 import { FadeIn } from "@/components/shared/FadeIn"
 import { GhostText } from "@/components/shared/GhostText"
 import { Stagger, StaggerItem } from "@/components/shared/Stagger"
@@ -15,6 +15,7 @@ const socials = [
   { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
   { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie-ab508a263", label: "LinkedIn" },
   { icon: IconBrandX, href: "https://x.com/Greatness0123", label: "X" },
+  { icon: IconBrandTelegram, href: "https://t.me/gruco01", label: "Telegram" },
   { icon: IconBrandInstagram, href: "https://instagram.com/greatness-okorie", label: "Instagram" },
 ]
 

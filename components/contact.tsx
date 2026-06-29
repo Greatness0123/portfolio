@@ -7,6 +7,7 @@ import {
   IconBrandLinkedin,
   IconBrandWhatsapp,
   IconBrandX,
+  IconBrandTelegram,
 } from "@tabler/icons-react"
 import { toast } from "sonner"
 import { FadeIn } from "@/components/shared/FadeIn"
@@ -24,6 +25,7 @@ const socials = [
   { icon: IconBrandX, href: "https://x.com/Gruco01", label: "X" },
   { icon: IconBrandInstagram, href: "https://instagram.com/greatness-okorie", label: "Instagram" },
   { icon: IconBrandWhatsapp, href: "https://wa.me/qr/BLILCEKHZL3AO1", label: "WhatsApp" },
+  { icon: IconBrandTelegram, href: "https://t.me/gruco01", label: "Telegram" },
 ]
 
 export function Contact() {
