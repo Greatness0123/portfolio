@@ -17,6 +17,8 @@ const tools = [
   { name: "React Native", slug: "react" },
   { name: "HTML5", slug: "html5" },
   { name: "CSS3", slug: "css" },
+  { name: "C++", slug: "cplusplus" },{ name: "C", slug: "c" },
+  { name: "flutter", slug: "flutter" },
   { name: "Framer Motion", slug: "framer" },
   { name: "Three.js", slug: "threedotjs" },
   { name: "Gradio", slug: "gradio" },
@@ -62,6 +64,7 @@ const tools = [
   { name: "Kaggle", slug: "kaggle" },
   { name: "stripe", slug: "stripe" },
   { name: "Figma", slug: "figma" },
+  { name: "photopea", slug: "photopea" },
   { name: "opencode", slug: "opencode" },
   { name: "kalilinux", slug: "kalilinux" },
   { name: "Postman", slug: "postman" },
@@ -70,6 +73,8 @@ const tools = [
   { name: "obsstudio", slug: "obsstudio" },
   { name: "jupyter", slug: "jupyter" },
   { name: "androidstudio", slug: "androidstudio" },
+  { name: "Arduino", slug: "arduino" },
+  
 ]
 
 const ROW_COUNT = 3
