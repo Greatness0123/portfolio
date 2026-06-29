@@ -19,6 +19,7 @@ const tools = [
   { name: "CSS3", slug: "css" },
   { name: "C++", slug: "cplusplus" },{ name: "C", slug: "c" },
   { name: "flutter", slug: "flutter" },
+  { name: "kotlin", slug: "kotlin" },
   { name: "Framer Motion", slug: "framer" },
   { name: "Three.js", slug: "threedotjs" },
   { name: "Gradio", slug: "gradio" },
