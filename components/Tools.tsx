@@ -158,6 +158,11 @@ function StackText({ className }: { className?: string }) {
           }}
         />
       </div>
+      <span
+        className="mt-2 font-mono text-[10px] uppercase tracking-widest text-muted"
+      >
+        but not limited to
+      </span>
     </div>
   )
 }
