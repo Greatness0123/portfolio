@@ -13,7 +13,7 @@ const GitHubCalendar = dynamic(
 
 const socials = [
   { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
-  { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie-ab508a263", label: "LinkedIn" },
+  { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie", label: "LinkedIn" },
   { icon: IconBrandX, href: "https://x.com/Greatness0123", label: "X" },
   { icon: IconBrandTelegram, href: "https://t.me/gruco01", label: "Telegram" },
   { icon: IconBrandInstagram, href: "https://instagram.com/greatness-okorie", label: "Instagram" },
