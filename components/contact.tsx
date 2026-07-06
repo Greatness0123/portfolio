@@ -14,10 +14,10 @@ import { FadeIn } from "@/components/shared/FadeIn"
 import { GhostText } from "@/components/shared/GhostText"
 import { MagneticButton } from "@/components/shared/MagneticButton"
 
-const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/FORM_ID/formResponse"
-const ENTRY_NAME = "entry.XXXXXXXXX"
-const ENTRY_EMAIL = "entry.YYYYYYYYY"
-const ENTRY_MESSAGE = "entry.ZZZZZZZZZ"
+const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfVjpjclQiVKvyqx3Un068KkQEuE6KIjgpKC_cqXyPwoT8zxw/formResponse"
+const ENTRY_NAME = "entry.786935256"
+const ENTRY_EMAIL = "entry.719188387"
+const ENTRY_MESSAGE = "entry.1805873703"
 
 const socials = [
   { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
