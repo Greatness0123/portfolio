@@ -22,8 +22,8 @@ const ENTRY_MESSAGE = "entry.1805873703"
 const socials = [
   { icon: IconBrandGithub, href: "https://github.com/Greatness0123", label: "GitHub" },
   { icon: IconBrandLinkedin, href: "https://www.linkedin.com/in/greatness-okorie", label: "LinkedIn" },
-  { icon: IconBrandX, href: "https://x.com/Gruco01", label: "X" },
-  { icon: IconBrandInstagram, href: "https://instagram.com/greatness-okorie", label: "Instagram" },
+  { icon: IconBrandX, href: "https://x.com/Gr8nessokorie", label: "X" },
+  { icon: IconBrandInstagram, href: "https://instagram.com/greatness_okorie", label: "Instagram" },
   { icon: IconBrandWhatsapp, href: "https://wa.me/qr/BLILCEKHZL3AO1", label: "WhatsApp" },
   { icon: IconBrandTelegram, href: "https://t.me/gruco01", label: "Telegram" },
 ]
