@@ -51,6 +51,26 @@ export function Projects() {
       githubUrl: "https://github.com/Greatness0123/index",
       status: "live",
     },
+    {
+      title: "Synthia",
+      description:
+        "Browser-based AI embodiment sandbox. An agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.",
+      image: "/placeholder.svg",
+      tech: ["Three.js", "Rapier.js", "Node.js", "Supabase pgvector", "Kaggle VLM"],
+      liveUrl: "https://runsynthia.online",
+      githubUrl: "https://github.com/Greatness0123/synthia",
+      status: "live",
+    },
+    {
+      title: "Bells Notice",
+      description:
+        "Notice broadcasting and campus communications system for Bells University. Real-time announcements and structured notice board.",
+      image: "/placeholder.svg",
+      tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+      liveUrl: "https://bellsnotice.vercel.app",
+      githubUrl: "https://github.com/Greatness0123/bellsnotice",
+      status: "live",
+    },
   ]
 
   const ongoingProjects = [
