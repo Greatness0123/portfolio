@@ -13,8 +13,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "control",
+    id: "synthia",
     number: "01",
+    name: "SYNTHIA",
+    status: "LIVE",
+    description:
+      "Browser-based AI embodiment sandbox. An agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.",
+    stack: ["Three.js", "Rapier.js", "Node.js", "Supabase pgvector", "Kaggle VLM"],
+    demoUrl: "https://runsynthia.online",
+    githubUrl: "https://github.com/Greatness0123/synthia",
+  },
+  {
+    id: "control",
+    number: "02",
     name: "CONTROL",
     status: "LIVE",
     description:
@@ -25,7 +36,7 @@ export const projects: Project[] = [
   },
   {
     id: "bellsattend",
-    number: "02",
+    number: "03",
     name: "BELLSATTEND+",
     status: "LIVE",
     description:
@@ -33,17 +44,6 @@ export const projects: Project[] = [
     stack: ["Next.js", "Supabase Realtime", "PostgreSQL", "Tailwind", "PWA"],
     demoUrl: "https://bellsattend.vercel.app",
     githubUrl: "https://github.com/Greatness0123/bells_attend",
-  },
-  {
-    id: "synthia",
-    number: "03",
-    name: "SYNTHIA",
-    status: "LIVE",
-    description:
-      "Browser-based AI embodiment sandbox. An agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.",
-    stack: ["Three.js", "Rapier.js", "Node.js", "Supabase pgvector", "Kaggle VLM"],
-    demoUrl: "https://runsynthia.online",
-    githubUrl: "https://github.com/Greatness0123/synthia",
   },
   {
     id: "index",

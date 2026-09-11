@@ -32,6 +32,16 @@ export function Projects() {
 
   const newLiveProjects = [
     {
+      title: "Synthia",
+      description:
+        "Browser-based AI embodiment sandbox. An agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.",
+      image: "/placeholder.svg",
+      tech: ["Three.js", "Rapier.js", "Node.js", "Supabase pgvector", "Kaggle VLM"],
+      liveUrl: "https://runsynthia.online",
+      githubUrl: "https://github.com/Greatness0123/synthia",
+      status: "live",
+    },
+    {
       title: "Control",
       description:
         "The AI-powered desktop assistant that lets you control your computer and browser using natural language. Command is control.",
@@ -49,16 +59,6 @@ export function Projects() {
       tech: ["React", "TypeScript", "Tailwind CSS", "Vercel"],
       liveUrl: "https://index-tools.vercel.app",
       githubUrl: "https://github.com/Greatness0123/index",
-      status: "live",
-    },
-    {
-      title: "Synthia",
-      description:
-        "Browser-based AI embodiment sandbox. An agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.",
-      image: "/placeholder.svg",
-      tech: ["Three.js", "Rapier.js", "Node.js", "Supabase pgvector", "Kaggle VLM"],
-      liveUrl: "https://runsynthia.online",
-      githubUrl: "https://github.com/Greatness0123/synthia",
       status: "live",
     },
     {
