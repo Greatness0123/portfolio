@@ -17,26 +17,26 @@ Greatness Okorie is an AI Engineer, Full-Stack Developer, and Founder based in L
 
 ## Projects Directory
 
-### 1. CONTROL
+### 1. SYNTHIA
+- **Status**: Live
+- **Description**: Browser-based AI embodiment sandbox where an agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.
+- **Stack**: Three.js, Rapier.js, Node.js, Supabase pgvector, Kaggle VLM
+- **Live Demo**: [runsynthia.online](https://runsynthia.online)
+- **Repository**: [github.com/Greatness0123/synthia](https://github.com/Greatness0123/synthia)
+
+### 2. CONTROL
 - **Status**: Live
 - **Description**: An Electron desktop agent that controls your computer using natural language. Features three interaction modes: Act, Ask, and Guide.
 - **Stack**: Electron, Python, Node.js, nut-js, Supabase, Vosk, Picovoice
 - **Live Demo**: [control-website.vercel.app](https://control-website.vercel.app)
 - **Repository**: [github.com/Greatness0123/control-desktop](https://github.com/Greatness0123/control-desktop)
 
-### 2. BELLSATTEND+
+### 3. BELLSATTEND+
 - **Status**: Live
 - **Description**: University attendance infrastructure allowing teachers to broadcast a 60-second attendance window for nearby students to tap in via Supabase Realtime WebSockets.
 - **Stack**: Next.js, Supabase Realtime, PostgreSQL, Tailwind CSS, PWA
 - **Live Demo**: [bellsattend.vercel.app](https://bellsattend.vercel.app)
 - **Repository**: [github.com/Greatness0123/bells_attend](https://github.com/Greatness0123/bells_attend)
-
-### 3. SYNTHIA
-- **Status**: Live
-- **Description**: Browser-based AI embodiment sandbox where an agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.
-- **Stack**: Three.js, Rapier.js, Node.js, Supabase pgvector, Kaggle VLM
-- **Live Demo**: [runsynthia.online](https://runsynthia.online)
-- **Repository**: [github.com/Greatness0123/synthia](https://github.com/Greatness0123/synthia)
 
 ### 4. BELLS NOTICE
 - **Status**: Live
