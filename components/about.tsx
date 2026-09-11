@@ -20,9 +20,9 @@ const socials = [
 ]
 
 const stats = [
-  { label: "Projects shipped", value: "7+" },
+  { label: "Projects shipped", value: "8+" },
   { label: "Years building", value: "8+" },
-  { label: "Live products", value: "5+" },
+  { label: "Live products", value: "6+" },
   { label: "Currently building", value: "SYNTHIA" },
 ]
 

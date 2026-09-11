@@ -1,0 +1,82 @@
+# Greatness Okorie — AI Engineer, Fullstack Developer & Founder
+
+> "Building systems that think, interfaces that feel, and products that ship."
+
+Greatness Okorie is an AI Engineer, Full-Stack Developer, and Founder based in Lagos, Nigeria. He studies Computer Science at Bells University of Technology while designing, shipping, and scaling AI-powered systems and software applications.
+
+---
+
+## Technical Expertise & Stack
+
+- **AI & ML**: Python, AI Coding Agents (Cursor, Jules, OpenCode), PyTorch, VLM/LLM Integration, Local AI Models, Natural Language Processing, Browser Automation.
+- **Frontend & App Dev**: React, Next.js, TypeScript, Tailwind CSS, Electron, React Native, NativeWind, Framer Motion, Three.js, Rapier.js.
+- **Backend & Database**: Node.js, Python, Supabase (Realtime, PostgreSQL, pgvector), Firebase, WebSockets, REST APIs.
+- **Tools & Infrastructure**: Docker, Vercel, Git, GitHub, Expo, Gradio.
+
+---
+
+## Projects Directory
+
+### 1. CONTROL
+- **Status**: Live
+- **Description**: An Electron desktop agent that controls your computer using natural language. Features three interaction modes: Act, Ask, and Guide.
+- **Stack**: Electron, Python, Node.js, nut-js, Supabase, Vosk, Picovoice
+- **Live Demo**: [control-website.vercel.app](https://control-website.vercel.app)
+- **Repository**: [github.com/Greatness0123/control-desktop](https://github.com/Greatness0123/control-desktop)
+
+### 2. BELLSATTEND+
+- **Status**: Live
+- **Description**: University attendance infrastructure allowing teachers to broadcast a 60-second attendance window for nearby students to tap in via Supabase Realtime WebSockets.
+- **Stack**: Next.js, Supabase Realtime, PostgreSQL, Tailwind CSS, PWA
+- **Live Demo**: [bellsattend.vercel.app](https://bellsattend.vercel.app)
+- **Repository**: [github.com/Greatness0123/bells_attend](https://github.com/Greatness0123/bells_attend)
+
+### 3. SYNTHIA
+- **Status**: Live
+- **Description**: Browser-based AI embodiment sandbox where an agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.
+- **Stack**: Three.js, Rapier.js, Node.js, Supabase pgvector, Kaggle VLM
+- **Live Demo**: [runsynthia.online](https://runsynthia.online)
+- **Repository**: [github.com/Greatness0123/synthia](https://github.com/Greatness0123/synthia)
+
+### 4. BELLS NOTICE
+- **Status**: Live
+- **Description**: Notice broadcasting and information distribution system for Bells University. Real-time announcements, instant alerts, and campus communications platform.
+- **Stack**: Next.js, React, TypeScript, Tailwind CSS, Vercel
+- **Live Demo**: [bellsnotice.vercel.app](https://bellsnotice.vercel.app)
+- **Repository**: [github.com/Greatness0123/bellsnotice](https://github.com/Greatness0123/bellsnotice)
+
+### 5. INDEX
+- **Status**: Live
+- **Description**: Curated software discovery engine where users find the right tools for their problems, evaluated by cost, efficiency, and quality.
+- **Stack**: React, TypeScript, Tailwind CSS, Vercel
+- **Live Demo**: [index-tools.vercel.app](https://index-tools.vercel.app)
+- **Repository**: [github.com/Greatness0123/index](https://github.com/Greatness0123/index)
+
+### 6. AURA AI
+- **Status**: Live
+- **Description**: ChatGPT-inspired AI companion delivering conversational AI, sleek UI, personality-altering settings, and seamless integrations.
+- **Stack**: React, TypeScript, Tailwind CSS, Vercel, AI APIs
+- **Live Demo**: [auraaiweb.vercel.app](https://auraaiweb.vercel.app)
+- **Repository**: [github.com/Greatness0123/auraai](https://github.com/Greatness0123/auraai)
+
+### 7. AURA BROWSER AGENT
+- **Status**: Functional
+- **Description**: Browser automation and AI agent interface that interacts with and performs tasks on web pages autonomously.
+- **Stack**: Python, Gradio, Docker, Multiple LLMs, Browser Automation
+- **Repository**: [github.com/Greatness0123/browser-use-web-ui](https://github.com/Greatness0123/browser-use-web-ui)
+
+### 8. CHOPQUICK
+- **Status**: In Development
+- **Description**: Surplus food marketplace connecting Nigerian restaurants with price-sensitive consumers.
+- **Stack**: Next.js, Supabase, Tailwind, Gamma
+
+---
+
+## Online Profiles & Contact
+
+- **Website**: [greatnessokorie.com](https://greatnessokorie.com)
+- **GitHub**: [github.com/Greatness0123](https://github.com/Greatness0123)
+- **LinkedIn**: [linkedin.com/in/greatness-okorie](https://www.linkedin.com/in/greatness-okorie)
+- **X (Twitter)**: [x.com/Gr8nessokorie](https://x.com/Gr8nessokorie)
+- **Telegram**: [t.me/gruco01](https://t.me/gruco01)
+- **Instagram**: [instagram.com/greatness_okorie](https://instagram.com/greatness_okorie)

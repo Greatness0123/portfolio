@@ -38,10 +38,12 @@ export const projects: Project[] = [
     id: "synthia",
     number: "03",
     name: "SYNTHIA",
-    status: "IN DEVELOPMENT",
+    status: "LIVE",
     description:
       "Browser-based AI embodiment sandbox. An agent inhabits a rigged 3D body, learns motor control through physics simulation, and exports robotics training datasets.",
     stack: ["Three.js", "Rapier.js", "Node.js", "Supabase pgvector", "Kaggle VLM"],
+    demoUrl: "https://runsynthia.online",
+    githubUrl: "https://github.com/Greatness0123/synthia",
   },
   {
     id: "index",
@@ -83,5 +85,16 @@ export const projects: Project[] = [
       "A browser automation and AI agent interface. An assistant that actually does stuff on the web instead of just talking.",
     stack: ["Python", "Gradio", "Docker", "Multiple LLMs", "Browser Automation"],
     githubUrl: "https://github.com/Greatness0123/browser-use-web-ui",
+  },
+  {
+    id: "bells-notice",
+    number: "08",
+    name: "BELLS NOTICE",
+    status: "LIVE",
+    description:
+      "Notice broadcasting and information distribution system for Bells University. Real-time announcements, instant alerts, and structured campus communication.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    demoUrl: "https://bellsnotice.vercel.app",
+    githubUrl: "https://github.com/Greatness0123/bellsnotice",
   },
 ]
